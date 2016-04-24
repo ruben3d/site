@@ -11,11 +11,25 @@ body {
 	font-weight: 300;
 	font-style: normal;
 	font-size: 12pt;
+	color: #222;
 	margin: 0;
 	padding: 0;
+	min-width: 1000px;
+	list-style-type: square;
+	list-style-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" width="10" height="10"><circle fill="#3686ff" cx="5" cy="5" r="2"/></svg>');
 }
 
-body > header {
+#canvas3d {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	z-index: -1;
+}
+
+body > nav {
 	z-index: 1;
 	position: fixed;
 	top: 0;
@@ -31,13 +45,13 @@ body > header {
 	background-color: white;
 }
 
-body > header > ul {
+body > nav > ul {
 	display: inline-block;
 	margin: 0;
 	padding: 0;
 }
 
-body > header > ul > li {
+body > nav > ul > li {
 	position: relative;
 	cursor: pointer;
 	display: inline-block;
@@ -45,12 +59,12 @@ body > header > ul > li {
 	padding: 1em 1em;
 }
 
-body > header > ul > li:hover {
+body > nav > ul > li:hover {
 	color: #000;
 	background-color: #fafafa;
 }
 
-body > header > ul > li::after {
+body > nav > ul > li::after {
 	position: absolute;
 	overflow: hidden;
 	opacity: 0.0;
@@ -63,7 +77,7 @@ body > header > ul > li::after {
 	transition: all 0.25s ease-in-out;
 }
 
-body > header > ul > li:hover::after {
+body > nav > ul > li:hover::after {
 	opacity: 1.0;
 	width: 80%;
 	left: 10%;
@@ -72,12 +86,15 @@ body > header > ul > li:hover::after {
 
 body > section {
 	position: relative;
-	width: 100%;
-	margin: 0;
-	padding: 0;
+	width: 1000px;
+	margin: 0 auto;
+	padding: 3em 0;
 }
 
 #introSection {
+	width: 100%;
+	margin: 0;
+	padding: 0;
 	height: 100vh;
 	background-image: url(../img/intro.jpg);
 	background-position: center;
@@ -130,4 +147,103 @@ body > section {
 #skipButton:hover {
 	color: #fff;
 	background-color: #3686ff;
+}
+
+#experienceSection > section {
+	position: relative;
+	margin: 2em 0;
+}
+
+#experienceSection .range {
+	position: absolute;
+	padding: 0.5em 0;
+	left: 50%;
+	top: 0;
+	margin-left: -3em;
+	width: 6em;
+	height: 3em;
+	color: #fff;
+	background-color: #3686ff;
+	text-align: center;
+}
+
+#experienceSection .range span {
+	display: block;
+	/*width: inherit;*/
+	position: relative;
+	font-size: 14pt;
+}
+
+#experienceSection .range .dateFrom {
+	top: 1.25em;
+}
+
+#experienceSection .range .dateTo {
+	top: -1.25em;
+}
+
+#experienceSection h2, #experienceSection section > div {
+	margin: 0 0 0 550px;
+	width: 440px;
+	padding: 0 0 0 10px;
+	text-align: justify;
+}
+
+#experienceSection h2 {
+	position: relative;
+	color: #3686ff;
+	line-height: 1.5em;
+	font-size: 18pt;
+	font-weight: 300;
+}
+
+#experienceSection h2 .company, #experienceSection h2 .location {
+	display: block;
+	position: absolute;
+	top: 1.3em;
+	font-size: 14pt;
+	font-weight: 300;
+}
+
+#experienceSection h2 .company {
+	left: 10px;
+	color: #3686ff;
+}
+
+#experienceSection h2 .location {
+	right: 0;
+	color: #222;
+}
+
+#experienceSection h2 .location i {
+	color: #3686ff;
+}
+
+#experienceSection section > div {
+	margin-top: 2em;
+}
+
+#experienceSection aside {
+	position: absolute;
+	top: 0;
+	left: 100px;
+}
+
+#experienceSection aside div {
+	width: 300px;
+	height: 200px;
+}
+
+#experienceSection > section:nth-child(2n+1) h2, #experienceSection > section:nth-child(2n+1) > div {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+#experienceSection > section:nth-child(2n+1) aside {
+	left: auto;
+	right: 100px;
+}
+
+#experienceSection > section:nth-child(2n+1) h2 .company {
+	left: 0;
 }

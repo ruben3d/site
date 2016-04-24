@@ -15,14 +15,18 @@
 		<script src="js/jquery.scrollTo.min.js"></script>
 		<script src="js/three/three.min.js"></script>
 		<script src="js/three/Detector.js"></script>
+		<script src="js/three/controls/OrbitControls.js"></script>
 		<script src="js/three/libs/stats.min.js"></script>
 		<script src="js/three/libs/tween.min.js"></script>
 		<script src="js/three/loaders/MTLLoader.js"></script>
 		<script src="js/three/loaders/OBJLoader.js"></script>
+		<script src="js/modelviewer.js"></script>
 		<script src="js/script.js"></script>
 	</head>
 	<body>
-		<header class="noselect">
+		<canvas id="canvas3d"></canvas>
+
+		<nav class="noselect">
 			<ul>
 				<li id="introButton">Intro</li>
 				<li id="experienceButton">Experience</li>
@@ -31,31 +35,91 @@
 				<li id="aboutButton">About</li>
 				<li id="contactButton">Contact</li>
 			</ul>
-		</header>
+		</nav>
 
 		<section id="introSection">
-			<h1>Rub&eacute;n Moreno Montoliu <span>Software Developer</span></h1>
-			<div id="skipButton" class="noselect"><i class="fa fa-chevron-down" aria-hidden="true"></i></div>
+			<header><h1>Rub&eacute;n Moreno Montoliu <span>Software Developer</span></h1></header>
+			<footer><div id="skipButton" class="noselect"><i class="fa fa-chevron-down" aria-hidden="true"></i></div></footer>
 		</section>
 
 		<section id="experienceSection">
-			<h1>Experience</h1>
+			<header><h1>Experience</h1></header>
+
+			<section>
+				<header>
+					<h2>Magic Magician <span class="company">Hogwarts Magic School</span><span class="location"><i class="fa fa-map-marker" aria-hidden="true"></i> Magic Rd, UK</span></h2>
+					<div class="range"><span class="dateFrom">Feb 2014</span><span class="dateTo">Oct 2018</span></div>
+				</header>
+				<div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eleifend sem, in convallis odio. Morbi in sapien at magna ullamcorper mattis. Curabitur sed dui eu ligula molestie maximus a sed nisi. Maecenas sit amet feugiat felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+					<ul>
+						<li>Lolailo la le</li>
+						<li>Hei ha he hu</li>
+					</ul>
+				</div>
+				<aside><div id="test1"></div></aside>
+			</section>
+
+			<section>
+				<header>
+					<h2>Magic Magician <span class="company">Hogwarts Magic School</span><span class="location"><i class="fa fa-map-marker" aria-hidden="true"></i> Magic Rd, UK</span></h2>
+					<div class="range"><span class="dateFrom">Feb 2014</span><span class="dateTo">Oct 2018</span></div>
+				</header>
+				<div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eleifend sem, in convallis odio. Morbi in sapien at magna ullamcorper mattis. Curabitur sed dui eu ligula molestie maximus a sed nisi. Maecenas sit amet feugiat felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+					<ul>
+						<li>Lolailo la le</li>
+						<li>Hei ha he hu</li>
+					</ul>
+				</div>
+				<aside><div id="test2"></div></aside>
+			</section>
+
+			<section>
+				<header>
+					<h2>Magic Magician <span class="company">Hogwarts Magic School</span><span class="location"><i class="fa fa-map-marker" aria-hidden="true"></i> Magic Rd, UK</span></h2>
+					<div class="range"><span class="dateFrom">Feb 2014</span><span class="dateTo">Oct 2018</span></div>
+				</header>
+				<div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eleifend sem, in convallis odio. Morbi in sapien at magna ullamcorper mattis. Curabitur sed dui eu ligula molestie maximus a sed nisi. Maecenas sit amet feugiat felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+					<ul>
+						<li>Lolailo la le</li>
+						<li>Hei ha he hu</li>
+					</ul>
+				</div>
+				<aside><div id="test3"></div></aside>
+			</section>
+
+			<section>
+				<header>
+					<h2>Magic Magician <span class="company">Hogwarts Magic School</span><span class="location"><i class="fa fa-map-marker" aria-hidden="true"></i> Magic Rd, UK</span></h2>
+					<div class="range"><span class="dateFrom">Feb 2014</span><span class="dateTo">Oct 2018</span></div>
+				</header>
+				<div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eleifend sem, in convallis odio. Morbi in sapien at magna ullamcorper mattis. Curabitur sed dui eu ligula molestie maximus a sed nisi. Maecenas sit amet feugiat felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+					<ul>
+						<li>Lolailo la le</li>
+						<li>Hei ha he hu</li>
+					</ul>
+				</div>
+				<aside><div id="test4"></div></aside>
+			</section>
 		</section>
 
 		<section id="skillsSection">
-			<h1>Skills</h1>
+			<header><h1>Skills</h1></header>
 		</section>
 
 		<section id="sideProjectsSection">
-			<h1>Side Projects</h1>
+			<header><h1>Side Projects</h1></header>
 		</section>
 
 		<section id="aboutSection">
-			<h1>About</h1>
+			<header><h1>About</h1></header>
 		</section>
 
 		<section id="contactSection">
-			<h1>Contact</h1>
+			<header><h1>Contact</h1></header>
 		</section>
 	</body>
 </html>
