@@ -1,0 +1,133 @@
+
+.noselect {
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+body {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 300;
+	font-style: normal;
+	font-size: 12pt;
+	margin: 0;
+	padding: 0;
+}
+
+body > header {
+	z-index: 1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+	font-size: 14pt;
+	color: #333;
+	background-color: white;
+}
+
+body > header > ul {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+
+body > header > ul > li {
+	position: relative;
+	cursor: pointer;
+	display: inline-block;
+	margin: 0;
+	padding: 1em 1em;
+}
+
+body > header > ul > li:hover {
+	color: #000;
+	background-color: #fafafa;
+}
+
+body > header > ul > li::after {
+	position: absolute;
+	overflow: hidden;
+	opacity: 0.0;
+	bottom: 0;
+	width: 50%;
+	left: 25%;
+	height: 2px;
+	background-color: #3686ff;
+	content: '';
+	transition: all 0.25s ease-in-out;
+}
+
+body > header > ul > li:hover::after {
+	opacity: 1.0;
+	width: 80%;
+	left: 10%;
+	bottom: 0.5em;
+}
+
+body > section {
+	position: relative;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#introSection {
+	height: 100vh;
+	background-image: url(../img/intro.jpg);
+	background-position: center;
+	background-size: cover;
+}
+
+#introSection h1 {
+	position: absolute;
+	top: 70%;
+	left: 20%;
+	margin: 0;
+	padding: 0 0.5em;
+	color: #fff;
+	background-color: #3686ff;
+	line-height: 2em;
+	font-weight: 200;
+	font-size: 36pt;
+}
+
+#introSection h1 span {
+	position: absolute;
+	bottom: -1.5em;
+	right: 1em;
+	color: #3686ff;
+	background-color: #fff;
+	font-size: 18pt;
+	font-weight: 500;
+	line-height: 2em;
+	margin: 0;
+	padding: 0 0.5em;
+	text-transform: lowercase;
+}
+
+#skipButton {
+	cursor: pointer;
+	position: absolute;
+	bottom: 5%;
+	right: 5%;
+	color: #3686ff;
+	background-color: #fff;
+	font-size: 36pt;
+	text-align: center;
+	line-height: 1.5em;
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 0.75em;
+	transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+}
+
+#skipButton:hover {
+	color: #fff;
+	background-color: #3686ff;
+}
