@@ -37,6 +37,12 @@ body {
 	z-index: -1;
 }
 
+.viewer {
+	cursor: -moz-grab;
+	cursor: -webkit-grab;
+	cursor: grab;
+}
+
 body > nav {
 	z-index: 1;
 	position: fixed;
