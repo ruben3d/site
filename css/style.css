@@ -15,6 +15,8 @@
 }
 
 body {
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
 	font-family: 'Raleway', sans-serif;
 	font-weight: 300;
 	font-style: normal;
@@ -285,4 +287,83 @@ body > section:nth-child(2n+1) h1 {
 
 #experienceSection > section:nth-child(2n+1) h2 .company {
 	left: 0;
+}
+
+
+#skillsSection > div {
+	display: -ms-flex;
+	display: -webkit-flex;
+	display: flex;
+}
+
+#skillsSection > div > section {
+	transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+	width: 33%;
+	padding: 10px;
+}
+
+#skillsSection > div > section:hover, #skillsSection > div > section:hover h2 i {
+	background-color: #fff;
+	color: #3686ff;
+}
+
+#skillsSection > div > section h2 {
+	font-weight: 300;
+	font-size: 17pt;
+	color: #3686ff;
+}
+
+#skillsSection > div > section h2 i {
+	/*margin-right: 0.25em;*/
+	width: 1.5em;
+	text-align: center;
+	color: #fff;
+	background-color: #3686ff;
+	transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+}
+
+#skillsSection ul {
+	text-align: justify;
+}
+
+#skillsSection li {
+	display: inline-block;
+	padding-right: 0.1em;
+	font-size: 15pt;
+}
+
+#skillsSection li:nth-child(1) {
+	font-size: 24pt;
+}
+
+#skillsSection li:nth-child(2) {
+	font-size: 23pt;
+}
+
+#skillsSection li:nth-child(3) {
+	font-size: 22pt;
+}
+
+#skillsSection li:nth-child(4) {
+	font-size: 21pt;
+}
+
+#skillsSection li:nth-child(5) {
+	font-size: 20pt;
+}
+
+#skillsSection li:nth-child(6) {
+	font-size: 19pt;
+}
+
+#skillsSection li:nth-child(7) {
+	font-size: 18pt;
+}
+
+#skillsSection li:nth-child(8) {
+	font-size: 17pt;
+}
+
+#skillsSection li:nth-child(9) {
+	font-size: 16pt;
 }
