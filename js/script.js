@@ -11,6 +11,7 @@ $( document ).ready(function(){
 		setupNavbarButton('experienceButton', 'experienceSection');
 		setupNavbarButton('skillsButton', 'skillsSection');
 		setupNavbarButton('sideProjectsButton', 'sideProjectsSection');
+		setupNavbarButton('educationButton', 'educationSection');
 		setupNavbarButton('aboutButton', 'aboutSection');
 		setupNavbarButton('contactButton', 'contactSection');
 	};
