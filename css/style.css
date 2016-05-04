@@ -105,10 +105,34 @@ body > section {
 	padding: 3em 0;
 }
 
+body > section h1 {
+	color: #3686ff;
+	font-weight: 200;
+	font-size: 36pt;
+}
+
+body > section:nth-child(2n+1) {
+	color: #fff;
+	background-color: #3686ff;
+	margin: 0;
+	padding: 2em 0;
+	width: 100%;
+}
+
+body > section:nth-child(2n+1) > * {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+body > section:nth-child(2n+1) h1 {
+	color: #fff;
+}
+
 #introSection {
 	width: 100%;
 	margin: 0;
 	padding: 0;
+	border: 0;
 	height: 100vh;
 	background-image: url(../img/intro.jpg);
 	background-position: center;
@@ -166,6 +190,7 @@ body > section {
 #experienceSection > section {
 	position: relative;
 	margin: 2em 0;
+	border-top: 1px solid #3686ff;
 }
 
 #experienceSection .range {
@@ -189,7 +214,7 @@ body > section {
 }
 
 #experienceSection .range .dateFrom {
-	top: 1.25em;
+	top: 1.24em;
 }
 
 #experienceSection .range .dateTo {
