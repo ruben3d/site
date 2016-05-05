@@ -1,5 +1,6 @@
 
 $( document ).ready(function(){
+	"use strict";
 
 	function setupNavBar() {
 
@@ -55,15 +56,19 @@ $( document ).ready(function(){
 		$(document).on( 'scroll', updateActiveButton.bind(null, outline));
 	}
 
+	function setup3DViews() {
+		var viewer = new ModelViewer('canvas3d');
+		viewer.addScene('test1', 'test');
+		viewer.addScene('test2', 'test');
+		viewer.addScene('test3', 'test');
+		viewer.addScene('test4', 'test');
+	}
+
 	var outline = setupNavBar(outline);
 
 	setupSkipButton();
 	setupActiveSection(outline);
 	updateActiveButton(outline);
 
-	var viewer = new ModelViewer('canvas3d');
-	viewer.addScene('test1', 'test');
-	viewer.addScene('test2', 'test');
-	viewer.addScene('test3', 'test');
-	viewer.addScene('test4', 'test');
+	setup3DViews();
 });
