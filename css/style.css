@@ -290,17 +290,21 @@ body > section:nth-child(2n+1) h1 {
 	left: 0;
 }
 
+#skillsSection {
+}
 
 #skillsSection > div {
 	display: -ms-flex;
 	display: -webkit-flex;
 	display: flex;
+	margin-bottom: 2em;
 }
 
 #skillsSection > div > section {
 	transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
 	width: 33%;
-	padding: 10px;
+	padding: 0.5em;
+	padding-right: 2em;
 }
 
 #skillsSection > div > section:hover, #skillsSection > div > section:hover h2 i {
