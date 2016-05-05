@@ -103,6 +103,7 @@ body > nav > ul > li:hover::after {
 body > section {
 	position: relative;
 	width: 1000px;
+	min-height: 100vh;
 	margin: 0 auto;
 	padding: 3em 0;
 }
@@ -117,7 +118,7 @@ body > section:nth-child(2n+1) {
 	color: #fff;
 	background-color: #3686ff;
 	margin: 0;
-	padding: 2em 0;
+	/*padding: 2em 0;*/
 	width: 100%;
 }
 
