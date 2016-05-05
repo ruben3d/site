@@ -54,7 +54,7 @@ body > nav {
 	padding: 0;
 	width: 100%;
 	text-align: center;
-	border-bottom: 1px solid #ddd;
+	/*border-bottom: 1px solid #ddd;*/
 	box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 	font-size: 14pt;
 	color: #333;
@@ -68,6 +68,7 @@ body > nav > ul {
 }
 
 body > nav > ul > li {
+	transition: all 0.25s ease-in-out;
 	position: relative;
 	cursor: pointer;
 	display: inline-block;
@@ -98,6 +99,15 @@ body > nav > ul > li:hover::after {
 	width: 80%;
 	left: 10%;
 	bottom: 0.5em;
+}
+
+body > nav > ul > li.active {
+	color: #fff;
+	background-color: #3686ff;
+}
+
+body > nav > ul > li.active::after {
+	background-color: #fff;
 }
 
 body > section {
