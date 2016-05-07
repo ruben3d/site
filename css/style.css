@@ -45,6 +45,23 @@ body {
 	cursor: grab;
 }
 
+a {
+	text-decoration: none;
+	color: #3686ff;
+}
+
+a:before {
+	text-decoration: none;
+	font-family: FontAwesome;
+	content: "\f14c";
+	display: inline-block;
+	padding-right: 0.5em;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
 body > nav {
 	z-index: 1;
 	position: fixed;
@@ -381,4 +398,30 @@ body > section:nth-child(2n+1) h1 {
 
 #skillsSection li:nth-child(9) {
 	font-size: 16pt;
+}
+
+
+#sideProjectsSection section {
+	padding: 0;
+	min-height: 200px;
+	width: 750px;
+	position: relative;
+	margin-bottom: 2em;
+}
+
+#sideProjectsSection h2 {
+	color: #3686ff;
+	font-weight: 300;
+}
+
+#sideProjectsSection figure {
+	position: absolute;
+	top: 0;
+	right: -250px;
+	margin: 0;
+}
+
+#sideProjectsSection figure .viewer {
+	width: 200px;
+	height: 200px;
 }

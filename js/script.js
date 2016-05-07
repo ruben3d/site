@@ -62,6 +62,11 @@ $( document ).ready(function(){
 		viewer.addScene('test2', 'test');
 		viewer.addScene('test3', 'test');
 		viewer.addScene('test4', 'test');
+		viewer.addScene('sideLuna', 'test');
+		viewer.addScene('sideMaze', 'test');
+		viewer.addScene('sideSite', 'test');
+		viewer.addScene('sidePixel', 'test');
+		viewer.addScene('sidePhoto', 'test');
 	}
 
 	var outline = setupNavBar(outline);
