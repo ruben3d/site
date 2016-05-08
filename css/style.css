@@ -486,6 +486,15 @@ body > section:nth-child(2n+1) h1 {
 }
 
 
+#aboutSection {
+	font-size: 14pt;
+}
+
+#aboutSection p {
+	text-align: justify;
+}
+
+
 #contactSection {
 	font-size: 16pt;
 	/*list-style-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" width="10" height="10"><circle fill="#ffffff" cx="5" cy="5" r="2"/></svg>');*/
