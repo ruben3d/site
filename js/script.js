@@ -58,22 +58,22 @@ $( document ).ready(function(){
 
 	function setup3DViews() {
 		var viewer = new ModelViewer('canvas3d');
-		viewer.addScene('exp01', 'test');
-		viewer.addScene('exp02', 'test');
-		viewer.addScene('exp03', 'test');
-		viewer.addScene('exp04', 'test');
-		viewer.addScene('exp05', 'test');
-		viewer.addScene('exp06', 'test');
-		viewer.addScene('exp07', 'test');
-		viewer.addScene('exp08', 'test');
-		viewer.addScene('exp09', 'test');
-		viewer.addScene('exp10', 'test');
-		viewer.addScene('exp11', 'test');
-		viewer.addScene('sideLuna', 'test');
-		viewer.addScene('sideMaze', 'test');
-		viewer.addScene('sideSite', 'test');
-		viewer.addScene('sidePixel', 'test');
-		viewer.addScene('sidePhoto', 'test');
+		viewer.addScene('exp01', 'gears');
+		viewer.addScene('exp02', 'gears');
+		viewer.addScene('exp03', 'gears');
+		viewer.addScene('exp04', 'gears');
+		viewer.addScene('exp05', 'gears');
+		viewer.addScene('exp06', 'gears');
+		viewer.addScene('exp07', 'gears');
+		viewer.addScene('exp08', 'gears');
+		viewer.addScene('exp09', 'gears');
+		viewer.addScene('exp10', 'gears');
+		viewer.addScene('exp11', 'gears');
+		viewer.addScene('sideLuna', 'gears');
+		viewer.addScene('sideMaze', 'gears');
+		viewer.addScene('sideSite', 'gears');
+		viewer.addScene('sidePixel', 'gears');
+		viewer.addScene('sidePhoto', 'gears');
 	}
 
 	var outline = setupNavBar(outline);

@@ -10,9 +10,9 @@ function ModelViewer(canvasId) {
 
 		var rect = element.getBoundingClientRect();
 		var camera = new THREE.PerspectiveCamera( 60, rect.width/rect.height, 0.1, 100 );
-		camera.position.x = 2;
-		camera.position.y = 5;
-		camera.position.z = 5;
+		camera.position.x = 0.5;
+		camera.position.y = 0.5;
+		camera.position.z = -1;
 		scene.userData.camera = camera;
 
 		var controls = new THREE.OrbitControls( scene.userData.camera, scene.userData.element );
@@ -43,10 +43,10 @@ function ModelViewer(canvasId) {
 			} );
 		});
 
-		var hemiLight = new THREE.HemisphereLight( 0xffffff, 0xffffff, 1.0 );
+		var hemiLight = new THREE.HemisphereLight( 0xffffff, 0xffffff, 0.6 );
 		hemiLight.color.setHSL( 0.6, 1, 0.6 );
 		hemiLight.groundColor.setHSL( 0.095, 1, 0.75 );
-		hemiLight.position.set( 0, 0, 0 );
+		hemiLight.position.set( 0, 1, 0 );
 		scene.add( hemiLight );
 
 		var light = new THREE.DirectionalLight( 0xfffffa, 0.7 );
