@@ -50,12 +50,13 @@ a {
 	color: #3686ff;
 }
 
-a:before {
+a:after {
 	text-decoration: none;
 	font-family: FontAwesome;
 	content: "\f14c";
 	display: inline-block;
-	padding-right: 0.5em;
+	padding-left: 0.5em;
+	/*padding-right: 0.5em;*/
 }
 
 a:hover {
@@ -482,4 +483,18 @@ body > section:nth-child(2n+1) h1 {
 
 #educationSection section, #educationSection section > p {
 	clear: both;
+}
+
+
+#contactSection {
+	font-size: 16pt;
+	/*list-style-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" width="10" height="10"><circle fill="#ffffff" cx="5" cy="5" r="2"/></svg>');*/
+}
+
+#contactSection a {
+	color: #fff;
+}
+
+#contactSection li {
+	margin: 1em 0;
 }
