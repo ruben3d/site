@@ -62,6 +62,11 @@ a:hover {
 	text-decoration: underline;
 }
 
+em {
+	font-style: normal;
+	font-weight: 500;
+}
+
 body > nav {
 	z-index: 1;
 	position: fixed;
@@ -292,6 +297,10 @@ body > section:nth-child(2n+1) h1 {
 	margin-top: 2em;
 }
 
+#experienceSection section ul {
+	padding-left: 1em;
+}
+
 #experienceSection aside {
 	position: absolute;
 	top: 0;
@@ -316,6 +325,7 @@ body > section:nth-child(2n+1) h1 {
 #experienceSection > section:nth-child(2n+1) h2 .company {
 	left: 0;
 }
+
 
 #skillsSection {
 }
@@ -428,8 +438,8 @@ body > section:nth-child(2n+1) h1 {
 
 
 #educationSection section {
-	margin-top: 3em;
-	margin-bottom: 3em;
+	margin-top: 2.5em;
+	margin-bottom: 2.5em;
 }
 
 #educationSection section header {
@@ -472,9 +482,4 @@ body > section:nth-child(2n+1) h1 {
 
 #educationSection section, #educationSection section > p {
 	clear: both;
-}
-
-#educationSection section > p em {
-	font-style: normal;
-	font-weight: 500;
 }

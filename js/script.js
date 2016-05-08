@@ -58,10 +58,17 @@ $( document ).ready(function(){
 
 	function setup3DViews() {
 		var viewer = new ModelViewer('canvas3d');
-		viewer.addScene('test1', 'test');
-		viewer.addScene('test2', 'test');
-		viewer.addScene('test3', 'test');
-		viewer.addScene('test4', 'test');
+		viewer.addScene('exp01', 'test');
+		viewer.addScene('exp02', 'test');
+		viewer.addScene('exp03', 'test');
+		viewer.addScene('exp04', 'test');
+		viewer.addScene('exp05', 'test');
+		viewer.addScene('exp06', 'test');
+		viewer.addScene('exp07', 'test');
+		viewer.addScene('exp08', 'test');
+		viewer.addScene('exp09', 'test');
+		viewer.addScene('exp10', 'test');
+		viewer.addScene('exp11', 'test');
 		viewer.addScene('sideLuna', 'test');
 		viewer.addScene('sideMaze', 'test');
 		viewer.addScene('sideSite', 'test');
