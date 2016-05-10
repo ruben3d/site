@@ -539,6 +539,14 @@ body > section:nth-child(2n+1) h1 {
 		display: block;
 	}
 
+	canvas, aside, figure, .viewer {
+		display: none;
+	}
+
+	body {
+		min-width: inherit;
+	}
+
 	body > nav {
 		left: -1000px;
 		transition: left 0.5s ease-in-out;
@@ -550,5 +558,59 @@ body > section:nth-child(2n+1) h1 {
 
 	body > nav > ul {
 		padding-left: 2em;
+	}
+
+	body > section {
+		margin: 0;
+		padding: 2em 0;
+		width: 100vw;
+	}
+
+	#introSection h1 {
+		top: auto;
+		bottom: 10%;
+		left: 0;
+		font-size: 24pt;
+	}
+
+	#introSection h1 span {
+		top: -1.5em;
+		bottom: auto;
+	}
+
+	#experienceSection > section {
+		margin: 2em 0;
+	}
+
+	#experienceSection .range {
+		left: 0;
+		margin-left: 0;
+	}
+
+	#experienceSection h2, #experienceSection section > div {
+		text-align: left;
+		width: auto;
+		padding: 0;
+	}
+
+	#experienceSection h2, #experienceSection > section:nth-child(2n+1) h2 {
+		margin: 0 0 0 4.25em;
+	}
+
+	#experienceSection h2 .company, #experienceSection h2 .location {
+		position: static;
+	}
+
+	#experienceSection h2 .company {
+		left: auto;
+		top: auto;
+	}
+
+	#experienceSection h2 .location {
+		right: auto;
+	}
+
+	#experienceSection section > div, #experienceSection > section:nth-child(2n+1) > div {
+		margin: 1em;
 	}
 }
