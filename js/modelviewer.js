@@ -54,14 +54,14 @@ function ModelViewer(canvasId) {
 		light.castShadow = true;
 		light.shadow.mapSize.width = 512;
 		light.shadow.mapSize.height = 512;
-		var shadowWidth = 5;
+		var shadowWidth = 2;
 		light.shadow.camera.left = -shadowWidth;
 		light.shadow.camera.right = shadowWidth;
 		light.shadow.camera.top = shadowWidth;
 		light.shadow.camera.bottom = -shadowWidth;
 		light.shadow.camera.far = 20;
 		light.shadow.camera.near = 0.1;
-		light.shadow.bias = -0.0001;
+		//light.shadow.bias = 0.0001;
 		scene.add( light );
 
 		scenes.push( scene );

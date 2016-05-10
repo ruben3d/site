@@ -69,11 +69,11 @@ $( document ).ready(function(){
 		viewer.addScene('exp09', 'gears');
 		viewer.addScene('exp10', 'gears');
 		viewer.addScene('exp11', 'gears');
-		viewer.addScene('sideLuna', 'gears');
-		viewer.addScene('sideMaze', 'gears');
+		viewer.addScene('sideLuna', 'luna');
+		viewer.addScene('sideMaze', 'maze');
 		viewer.addScene('sideSite', 'gears');
-		viewer.addScene('sidePixel', 'gears');
-		viewer.addScene('sidePhoto', 'gears');
+		viewer.addScene('sidePixel', 'pixel');
+		viewer.addScene('sidePhoto', 'photo');
 	}
 
 	var outline = setupNavBar(outline);
