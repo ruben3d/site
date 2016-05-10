@@ -76,6 +76,9 @@ function ModelViewer(canvasId) {
 	}
 
 	var render = function() {
+		var canvasStyle = window.getComputedStyle(canvas);
+    	if (canvasStyle.display === 'none') return;
+
 		updateSize();
 
 		renderer.setClearColor( 0xffffff );
