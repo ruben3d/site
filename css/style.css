@@ -6,6 +6,10 @@
 	user-select: none;
 }
 
+.hidden {
+	display: none;
+}
+
 ::-moz-selection {
 	color: black; background: rgb(255, 227, 110);
 }
@@ -21,7 +25,7 @@ body {
 	font-weight: 300;
 	font-style: normal;
 	font-size: 12pt;
-	color: #222;
+	color: #333;
 	margin: 0;
 	padding: 0;
 	min-width: 1000px;
@@ -287,7 +291,7 @@ body > section:nth-child(2n+1) h1 {
 
 #experienceSection h2 .location {
 	right: 0;
-	color: #222;
+	color: #333;
 }
 
 #experienceSection h2 .location i {
@@ -506,4 +510,45 @@ body > section:nth-child(2n+1) h1 {
 
 #contactSection li {
 	margin: 1em 0;
+}
+
+/* **************************************
+
+	Mobile
+
+***************************************** */
+
+#menuButton {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+
+	text-align: center;
+	font-size: 14pt;
+	color: #333;
+	background-color: white;
+
+	transition: all 0.25s ease-in-out;
+	cursor: pointer;
+	padding: 1em 1em;
+}
+
+@media ( max-width: 1000px ) {
+	#menuButton {
+		display: block;
+	}
+
+	body > nav {
+		left: -1000px;
+		transition: left 0.5s ease-in-out;
+	}
+
+	body > nav.displayed {
+		left: 0;
+	}
+
+	body > nav > ul {
+		padding-left: 2em;
+	}
 }

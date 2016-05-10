@@ -29,6 +29,17 @@ $( document ).ready(function(){
 		return outline;
 	};
 
+	function setupMenuButton() {
+		$('#menuButton').on('click', function(){
+			var $nav = $('body > nav');
+			if ( $nav.hasClass( 'displayed' ) ) {
+				$nav.removeClass( 'displayed' );
+			} else {
+				$nav.addClass( 'displayed' );
+			}
+		});
+	}
+
 	function setupSkipButton() {
 		$('#skipButton').on('click', function(){
 			$.scrollTo('#experienceSection', 700, {easing: 'easeInOutCubic'});
@@ -77,7 +88,7 @@ $( document ).ready(function(){
 	}
 
 	var outline = setupNavBar(outline);
-
+	setupMenuButton();
 	setupSkipButton();
 	setupActiveSection(outline);
 	updateActiveButton(outline);
