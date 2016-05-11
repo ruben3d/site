@@ -641,6 +641,36 @@ body > section:nth-child(2n+1) h1 {
 		width: auto;
 	}
 
+	#educationSection header {
+		position: relative;
+	}
+
+	#educationSection section header h2 {
+		line-height: 1.5em;
+	}
+
+	#educationSection section header p {
+		margin-top: 1em;
+	}
+
+	#educationSection section header h2, #educationSection section header p {
+		margin-left: 70px;
+		padding: 0;
+	}
+
+	#educationSection section header p span.location {
+		margin: 0;
+	}
+
+	#educationSection section header div {
+		position: absolute;
+		left: 0;
+	}
+
+	#educationSection section > p {
+		margin: 1em;
+	}
+
 	#aboutSection p {
 		font-size: 14pt;
 		padding: 0 1em;
