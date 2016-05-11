@@ -640,4 +640,9 @@ body > section:nth-child(2n+1) h1 {
 		min-height: 0;
 		width: auto;
 	}
+
+	#aboutSection p {
+		font-size: 14pt;
+		padding: 0 1em;
+	}
 }
