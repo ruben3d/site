@@ -634,4 +634,10 @@ body > section:nth-child(2n+1) h1 {
 		color: #3686ff;
 	}
 
+	#sideProjectsSection section {
+		padding: 0.5em 1em;
+		margin-bottom: 0;
+		min-height: 0;
+		width: auto;
+	}
 }
