@@ -645,4 +645,16 @@ body > section:nth-child(2n+1) h1 {
 		font-size: 14pt;
 		padding: 0 1em;
 	}
+
+	#contactSection {
+		font-size: 14pt;
+	}
+
+	#contactSection p, #contactSection li {
+		margin: 1em;
+	}
+
+	#contactSection li {
+		margin-left: -1em;
+	}
 }
