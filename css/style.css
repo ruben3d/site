@@ -227,6 +227,7 @@ body > section:nth-child(2n+1) h1 {
 	background-color: #3686ff;
 }
 
+
 #experienceSection > section {
 	position: relative;
 	margin: 2em 0;
@@ -298,6 +299,10 @@ body > section:nth-child(2n+1) h1 {
 	color: #3686ff;
 }
 
+#experienceSection section {
+	min-height: 300px;
+}
+
 #experienceSection section > div {
 	margin-top: 2em;
 }
@@ -314,7 +319,7 @@ body > section:nth-child(2n+1) h1 {
 
 #experienceSection aside div {
 	width: 300px;
-	height: 200px;
+	height: 300px;
 }
 
 #experienceSection > section:nth-child(2n+1) h2, #experienceSection > section:nth-child(2n+1) > div {
@@ -582,6 +587,7 @@ body > section:nth-child(2n+1) h1 {
 
 	#experienceSection > section {
 		margin: 2em 0;
+		min-height: auto;
 	}
 
 	#experienceSection .range {
