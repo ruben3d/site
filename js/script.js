@@ -69,7 +69,7 @@ $( document ).ready(function(){
 
 	function setup3DViews() {
 		var viewer = new ModelViewer('canvas3d');
-		viewer.addScene('exp01', 'gears');
+		viewer.addScene('exp01', '42iq2');
 		viewer.addScene('exp02', 'cnp');
 		viewer.addScene('exp03', 'gears');
 		viewer.addScene('exp04', 'gears');
