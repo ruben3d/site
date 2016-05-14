@@ -299,6 +299,8 @@ THREE.MTLLoader.MaterialCreator.prototype = {
 
 		};
 
+		var shadeless = false;
+
 		for ( var prop in mat ) {
 
 			var value = mat[ prop ];
@@ -378,6 +380,15 @@ THREE.MTLLoader.MaterialCreator.prototype = {
 
 					break;
 
+				case 'illum':
+
+					// Shadeless
+					if (value === '0') {
+						shadeless = true;
+					}
+
+					break;
+
 				default:
 					break;
 
@@ -385,7 +396,7 @@ THREE.MTLLoader.MaterialCreator.prototype = {
 
 		}
 
-		this.materials[ materialName ] = new THREE.MeshPhongMaterial( params );
+		this.materials[ materialName ] = shadeless ? new THREE.MeshBasicMaterial( params ) : new THREE.MeshPhongMaterial( params );
 		return this.materials[ materialName ];
 
 	},
