@@ -71,7 +71,7 @@ $( document ).ready(function(){
 		var viewer = new ModelViewer('canvas3d');
 		viewer.addScene('exp01', '42iq2');
 		viewer.addScene('exp02', 'cnp');
-		viewer.addScene('exp03', 'gears');
+		viewer.addScene('exp03', '42iq1');
 		viewer.addScene('exp04', 'gears');
 		viewer.addScene('exp05', 'gears');
 		viewer.addScene('exp06', 'gears');
