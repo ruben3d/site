@@ -1,8 +1,7 @@
 
 function ModelViewer(canvasId) {
 
-	this.addScene = function(elemId, modelName) {
-
+	var createScene = function(elemId, modelName) {
 		var element = document.getElementById(elemId);
 
 		var scene = new THREE.Scene();
@@ -67,17 +66,29 @@ function ModelViewer(canvasId) {
 		scenes.push( scene );
 	}
 
+	this.addScene = function(elemId, modelName) {
+		if (renderer !== null) {
+			createScene(elemId, modelName);
+		} else {
+			definitions[elemId] = modelName;
+		}
+	}
+
 	var updateSize = function() {
 		var width = canvas.clientWidth;
 		var height = canvas.clientHeight;
-		if ( canvas.width !== width || canvas.height != height ) {
+		if ( canvas.width !== width || canvas.height !== height ) {
 			renderer.setSize( width, height, false );
 		}
 	}
 
-	var render = function() {
+	var isDisplayed = function() {
 		var canvasStyle = window.getComputedStyle(canvas);
-    	if (canvasStyle.display === 'none') return;
+		return canvasStyle.display !== 'none';
+	}
+
+	var render = function() {
+		if (renderer === null || !isDisplayed()) return;
 
 		updateSize();
 
@@ -109,8 +120,24 @@ function ModelViewer(canvasId) {
 		} );
 	}
 
+	var init = function() {
+		renderer = new THREE.WebGLRenderer( { canvas: canvas, antialias: true } );
+		renderer.shadowMap.enabled = true;
+		renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+		//renderer.shadowMap.cullFace = THREE.CullFaceBack;
+		renderer.setClearColor( 0xffffff, 1 );
+		renderer.setPixelRatio( window.devicePixelRatio );
+
+		for (var elemId in definitions) {
+			createScene(elemId, definitions[elemId]);
+		}
+	}
+
 	var animate = function() {
 		requestAnimationFrame(animate.bind(this));
+		if (renderer === null && isDisplayed()) {
+			init();
+		}
 		render();
 	}
 
@@ -120,12 +147,8 @@ function ModelViewer(canvasId) {
 
 	var canvas = document.getElementById(canvasId);
 	var scenes = [];
-	var renderer = new THREE.WebGLRenderer( { canvas: canvas, antialias: true } );
-	renderer.shadowMap.enabled = true;
-	renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-	//renderer.shadowMap.cullFace = THREE.CullFaceBack;
-	renderer.setClearColor( 0xffffff, 1 );
-	renderer.setPixelRatio( window.devicePixelRatio );
+	var renderer = null;
+	var definitions = {};
 
 	animate();
 }
