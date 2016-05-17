@@ -396,7 +396,14 @@ THREE.MTLLoader.MaterialCreator.prototype = {
 
 		}
 
-		this.materials[ materialName ] = shadeless ? new THREE.MeshBasicMaterial( params ) : new THREE.MeshPhongMaterial( params );
+		if ( shadeless ) {
+			delete params[ 'specular' ];
+			delete params[ 'shininess' ];
+			this.materials[ materialName ] = new THREE.MeshBasicMaterial( params );
+		} else {
+			this.materials[ materialName ] = new THREE.MeshPhongMaterial( params );
+		}
+
 		return this.materials[ materialName ];
 
 	},
