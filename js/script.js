@@ -19,9 +19,9 @@ $( document ).ready(function(){
 		var outline = [];
 
 		setupNavbarButton('introButton', 'introSection');
-		setupNavbarButton('experienceButton', 'experienceSection');
-		setupNavbarButton('skillsButton', 'skillsSection');
 		setupNavbarButton('sideProjectsButton', 'sideProjectsSection');
+		setupNavbarButton('skillsButton', 'skillsSection');
+		setupNavbarButton('experienceButton', 'experienceSection');
 		setupNavbarButton('educationButton', 'educationSection');
 		setupNavbarButton('aboutButton', 'aboutSection');
 		setupNavbarButton('contactButton', 'contactSection');
@@ -42,7 +42,7 @@ $( document ).ready(function(){
 
 	function setupSkipButton() {
 		$('#skipButton').on('click', function(){
-			$.scrollTo('#experienceSection', 700, {easing: 'easeInOutCubic'});
+			$.scrollTo('#sideProjectsSection', 700, {easing: 'easeInOutCubic'});
 		});
 	};
 
